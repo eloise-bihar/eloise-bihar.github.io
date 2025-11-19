@@ -160,7 +160,7 @@
             font-size: 0.9rem;
             color: var(--muted);
             margin-bottom: 1.4rem;
-            line-height: 1.6;   /* also a bit less compact here */
+            line-height: 1.6;
         }
 
         .grid {
@@ -197,6 +197,16 @@
         ul.clean li::before { content: "•"; position: absolute; left: -0.9rem; color: var(--accent); }
 
         .muted { color: var(--muted); font-size: 0.94rem; }
+
+        /* Fix compact Contact section spacing */
+        #contact .card p {
+            margin: 0.6rem 0;
+            line-height: 1.7;
+        }
+
+        #contact .card {
+            padding: 1.8rem 2rem;
+        }
     </style>
 </head>
 <body>
@@ -310,16 +320,6 @@
                 </p>
             </div>
         </section>
-
-        /* Fix compact Contact section spacing */
-#contact .card p {
-    margin: 0.6rem 0;
-    line-height: 1.7;
-}
-
-#contact .card {
-    padding: 1.8rem 2rem;
-}
 
     </main>
 </body>
