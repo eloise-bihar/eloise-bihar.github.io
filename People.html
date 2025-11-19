@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Bihar Lab | People</title>
+    <title>Bihar Lab | Soft Bioelectronics & Hydrogels</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Google Font -->
@@ -22,10 +22,7 @@
             --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.10);
         }
 
-        * {
-            box-sizing: border-box;
-        }
-
+        * { box-sizing: border-box; }
         body {
             margin: 0;
             font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -33,11 +30,9 @@
             color: var(--dark);
         }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+        a { color: inherit; text-decoration: none; }
 
+        /* Top navigation */
         .nav {
             position: sticky;
             top: 0;
@@ -69,38 +64,96 @@
             color: var(--muted);
         }
 
-        .nav-links a:hover {
-            color: var(--ub-blue);
-        }
+        .nav-links a:hover { color: var(--ub-blue); }
 
+        /* Layout */
         .page {
             max-width: 1100px;
             margin: 0 auto;
             padding: 2.5rem 1.4rem 3.5rem;
         }
 
-        .section {
+        /* Hero */
+        .hero {
+            background: radial-gradient(circle at top left, #e0f2fe, #eff6ff 40%, #f3f4f6 100%);
+            border-radius: 26px;
+            padding: 2.4rem 2.1rem 2.3rem;
+            box-shadow: var(--shadow-soft);
             margin-bottom: 2.5rem;
         }
 
-        .section-title {
-            font-size: 1.3rem;
-            margin-bottom: 0.4rem;
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            background: rgba(37, 99, 235, 0.06);
+            color: #1d4ed8;
+            margin-bottom: 0.9rem;
         }
 
-        .section-subtitle {
+        .hero-title { font-size: 2.4rem; margin: 0 0 0.4rem; color: var(--ub-blue); }
+        .hero-subtitle { font-size: 1.05rem; font-weight: 500; margin: 0 0 0.8rem; }
+        .hero-text { max-width: 650px; font-size: 0.98rem; color: var(--muted); margin-bottom: 1.5rem; }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.55rem 1.1rem;
+            border-radius: 999px;
             font-size: 0.9rem;
-            color: var(--muted);
-            margin-bottom: 1.4rem;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--ub-blue), var(--accent));
+            color: white;
+            box-shadow: 0 14px 30px rgba(37, 99, 235, 0.35);
+        }
+        .btn-primary:hover { transform: translateY(-1px); }
+
+        .btn-ghost {
+            background: rgba(255,255,255,0.8);
+            border: 1px solid rgba(148,163,184,0.6);
+            color: var(--dark);
+        }
+        .btn-ghost:hover { background: white; transform: translateY(-1px); }
+
+        .section { margin-bottom: 2.5rem; }
+        .section-title { font-size: 1.3rem; margin-bottom: 0.4rem; }
+        .section-subtitle { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.4rem; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.1rem;
+        }
+
+        @media (max-width: 720px) {
+            .grid { grid-template-columns: 1fr; }
+            .hero { padding: 1.8rem 1.4rem 1.9rem; }
+            .hero-title { font-size: 2rem; }
         }
 
         .card {
             background: var(--card-bg);
             border-radius: var(--radius-lg);
-            padding: 1.3rem 1.4rem 1.4rem;
+            padding: 1rem 1.1rem;
             box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
             border: 1px solid rgba(148,163,184,0.4);
-            margin-bottom: 1.5rem;
         }
 
         .card h3 {
@@ -109,153 +162,124 @@
             font-size: 1.02rem;
         }
 
-        .card p {
-            margin: 0;
-            font-size: 0.92rem;
-            color: var(--muted);
-        }
+        .card p { margin: 0; font-size: 0.92rem; color: var(--muted); }
 
-        .muted {
-            color: var(--muted);
-            font-size: 0.94rem;
-        }
+        ul.clean { list-style: none; padding-left: 1.1rem; margin: 0.2rem 0 0; }
+        ul.clean li { font-size: 0.94rem; margin-bottom: 0.15rem; position: relative; }
+        ul.clean li::before { content: "•"; position: absolute; left: -0.9rem; color: var(--accent); }
 
-        .pill {
-            display: inline-flex;
-            padding: 0.2rem 0.6rem;
-            border-radius: 999px;
-            background: rgba(37, 99, 235, 0.08);
-            font-size: 0.78rem;
-            color: #1d4ed8;
-        }
-
-        .profile-photo {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 6px 16px rgba(15,23,42,0.25);
-            margin-bottom: 0.8rem;
-        }
-
-        .profile-header {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.2rem;
-            align-items: center;
-        }
-
-        .profile-header-text {
-            min-width: 220px;
-        }
-
-        @media (max-width: 640px) {
-            .profile-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
+        .muted { color: var(--muted); font-size: 0.94rem; }
     </style>
 </head>
 <body>
+
+    <!-- Top nav -->
     <header class="nav">
         <div class="nav-inner">
             <div class="nav-title">Bihar Lab @ UB</div>
             <nav class="nav-links">
+
+                <!-- ✅ FIXED LINKS TO MATCH YOUR FILE NAMES -->
                 <a href="index.html#research">Research</a>
-                <a href="news.html">News</a>
-                <a href="people.html">People</a>
-                <a href="teaching.html">Teaching</a>
+                <a href="News.html">News</a>
+                <a href="People.html">People</a>
+                <a href="Teaching.html">Teaching</a>
                 <a href="index.html#contact">Contact</a>
+
             </nav>
         </div>
     </header>
 
     <main class="page">
-        <section class="section">
-            <h2 class="section-title">People</h2>
-            <p class="section-subtitle">The Bihar Lab is growing a collaborative, interdisciplinary team.</p>
 
-            <!-- PI -->
-            <div class="card">
-                <h3>Principal Investigator</h3>
-                <div class="profile-header">
-                    <img src="eloise.jpg" alt="Photo of Dr. Eloise Bihar" class="profile-photo">
-                    <!-- Replace eloise.jpg with your actual image path or GitHub raw URL -->
-
-                    <div class="profile-header-text">
-                        <p>
-                            <strong>Dr. Eloise Bihar</strong>
-                            <span class="pill">Assistant Professor, MDI</span>
-                        </p>
-                        <p class="muted">
-                            Eloise Bihar is an assistant professor in the Department of Materials Design and Innovation at the
-                            State University of New York at Buffalo. She earned her Ph.D. from École des Mines de Saint-Étienne
-                            in France and completed two postdoctoral fellowships – one at King Abdullah University of Science and
-                            Technology (KAUST) in Saudi Arabia and another at the University of Colorado-Boulder.
-                        </p>
-                        <p class="muted">
-                            With a background in printed electronics and sensors, her research focuses on developing innovative,
-                            low-cost biosensors and biodegradable electronic materials for applications in healthcare,
-                            environmental monitoring, and agriculture. Her work advances sustainable materials and smart sensing
-                            technologies.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Graduate Students -->
-            <div class="card">
-                <h3>Graduate Students</h3>
-
-                <div class="profile-header">
-                    <img src="rebekah.jpg" alt="Photo of Rebekah" class="profile-photo">
-                    <!-- Replace rebekah.jpg with your actual image path or GitHub raw URL -->
-
-                    <div class="profile-header-text">
-                        <p>
-                            <strong>Rebekah [Last Name]</strong>
-                            <span class="pill">Ph.D. Student</span>
-                        </p>
-                        <p class="muted">
-                            Rebekah works on hydrogel engineering, OECT-based biosensing, and soft bioelectronic platforms.
-                            Her research explores ion transport in cryogels and the design of hydrogel-integrated electronic
-                            devices for sensing and therapeutic applications.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Alumni -->
-            <div class="card">
-                <h3>Alumni</h3>
-
-                <p><strong>Khrystyna Adam</strong> <span class="pill">M.S. 2024</span></p>
-                <p class="muted" style="margin-top:-0.4rem;">Master’s thesis researcher in soft materials and sensing.</p>
-
-                <hr style="border: none; border-top: 1px solid rgba(148,163,184,0.3); margin: 0.8rem 0;">
-
-                <p><strong>Amie Sallah</strong> <span class="pill">Undergraduate Research Assistant</span></p>
-                <p class="muted" style="margin-top:-0.4rem;">
-                    10/2024 – 05/2025 · Advisor: Dr. Bihar
-                </p>
-
-                <p><strong>Oreomo Sosanya</strong> <span class="pill">Undergraduate Research Assistant</span></p>
-                <p class="muted" style="margin-top:-0.4rem;">
-                    10/2024 – 05/2025 · Advisor: Dr. Bihar
-                </p>
-
-                <p><strong>Moumiza Hasan</strong> <span class="pill">Undergraduate Research Assistant</span></p>
-                <p class="muted" style="margin-top:-0.4rem;">
-                    10/2024 – 05/2025 · Advisor: Dr. Bihar
-                </p>
-            </div>
-
-            <p class="muted" style="margin-top:0.9rem;">
-                Graduate and undergraduate positions will be posted here as the lab grows.
+        <!-- Hero / intro -->
+        <section class="hero">
+            <div class="hero-kicker">Materials · Bioelectronics · Hydrogels</div>
+            <h1 class="hero-title">Bihar Lab</h1>
+            <p class="hero-subtitle">Soft Bioelectronics & Hydrogel-Based Sensors</p>
+            <p class="hero-text">
+                We are an interdisciplinary research group in the Department of Materials Design and Innovation
+                at the University at Buffalo. Our work bridges materials science, electrochemistry, and
+                bioengineering to create soft electronic systems using printed and adaptive hydrogels.
             </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#research">Explore the research</a>
+
+                <!-- ❗ FIX: this must match People.html -->
+                <a class="btn btn-ghost" href="People.html">Meet the group</a>
+            </div>
         </section>
+
+        <!-- Research Areas -->
+        <section id="research" class="section">
+            <h2 class="section-title">Research Areas & Directions</h2>
+            <p class="section-subtitle">
+                We study soft materials, hydrogel electronics, and biointerfaces that communicate with biology using ions,
+                electrons, and light. Active projects are kept confidential until publication or public release.
+            </p>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Hydrogel-Based Biosensing</h3>
+                    <p>Soft hydrogels engineered for detecting metabolites, pH, infection markers, and environmental signals.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Organic Electrochemical Transistors (OECTs)</h3>
+                    <p>Printed ionic-electronic devices enabling multiplexed sensing and rich time-dependent signals.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Ion Transport & Hydrogel Electrolytes</h3>
+                    <p>Hydration-controlled ion mobility and self-healing polymer networks for next-generation devices.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Bioactive & Therapeutic Soft Materials</h3>
+                    <p>Materials that modulate tissues through light, electrical stimulation, and chemical cues.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opportunities -->
+        <section class="section">
+            <div class="card">
+                <h3>Opportunities</h3>
+                <p class="muted">We are building a diverse, collaborative team with interests in:</p>
+                <ul class="clean">
+                    <li>Polymer & soft materials</li>
+                    <li>Electrochemistry / bioelectronics</li>
+                    <li>Microfabrication & printing</li>
+                    <li>Modeling, simulation & data science</li>
+                </ul>
+                <p class="muted" style="margin-top:0.7rem;">
+                    Prospective group members are encouraged to email a CV and a short statement of research interests.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">For positions, collaborations, or questions.</p>
+
+            <div class="card">
+                <p>
+                    Dr. Eloise Bihar<br/>
+                    Department of Materials Design and Innovation (MDI)<br/>
+                    University at Buffalo
+                </p>
+                <p class="muted">
+                    Email: <em>eloisebi(at)buffalo.edu</em><br/>
+                    Campus: North Campus, Buffalo, NY, USA
+                </p>
+                <p class="muted">
+                    Other links:
+                    <a href="https://scholar.google.com/citations?user=gNHOzE4AAAAJ" target="_blank">Google Scholar</a>
+                </p>
+            </div>
+        </section>
+
     </main>
 </body>
 </html>
-
