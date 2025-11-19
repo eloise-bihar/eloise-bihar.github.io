@@ -237,18 +237,6 @@
             color: var(--accent);
         }
 
-        .two-col {
-            display: grid;
-            grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
-            gap: 1.5rem;
-        }
-
-        @media (max-width: 900px) {
-            .two-col {
-                grid-template-columns: 1fr;
-            }
-        }
-
         .muted {
             color: var(--muted);
             font-size: 0.94rem;
@@ -272,7 +260,6 @@
             <div class="nav-title">Bihar Lab @ UB</div>
             <nav class="nav-links">
                 <a href="#research">Research</a>
-                <a href="#projects">Projects</a>
                 <a href="#people">People</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -296,53 +283,66 @@
             </div>
         </section>
 
-        <!-- Research areas -->
+        <!-- Research Areas & Directions -->
         <section id="research" class="section">
-            <h2 class="section-title">Research Areas</h2>
+            <h2 class="section-title">Research Areas & Directions</h2>
             <p class="section-subtitle">
-                We design materials and devices that communicate with biology using ions, electrons, and light.
+                We study soft materials, hydrogel electronics, and biointerfaces that communicate with biology using ions,
+                electrons, and light. We emphasize fundamental mechanisms and emerging applications; active projects are
+                kept confidential until publication or public release.
             </p>
 
             <div class="grid">
                 <div class="card">
-                    <h3>Hydrogel-Based Biosensors</h3>
-                    <p>Flexible platforms for monitoring metabolites and infection markers in complex environments
-                       (wounds, saliva, sweat, neural tissues).</p>
+                    <h3>Hydrogel-Based Biosensing</h3>
+                    <p>
+                        Soft, adaptive hydrogels engineered for detecting metabolites, pH, infection markers, and
+                        environmental signals across physiological and extreme conditions.
+                    </p>
                 </div>
+
                 <div class="card">
                     <h3>Organic Electrochemical Transistors (OECTs)</h3>
-                    <p>Printed OECT architectures for multiplexed sensing, data-rich readout, and integration with
-                       AI-driven analytics.</p>
+                    <p>
+                        Printed mixed ionic-electronic conductors enabling multiplexed sensing, rich time-dependent
+                        signals, and integration with data-driven analytics.
+                    </p>
                 </div>
+
                 <div class="card">
-                    <h3>Hydrogel Electrolytes & Ion Transport</h3>
-                    <p>Hydrogels with tunable hydration, ionic conductivity, and self-healing
-                       behavior for soft electronics and energy devices.</p>
+                    <h3>Ion Transport & Hydrogel Electrolytes</h3>
+                    <p>
+                        Hydration-controlled ion mobility, self-healing polymer networks, and ionic-electronic coupling
+                        for next-generation soft electronic and energy devices.
+                    </p>
                 </div>
+
                 <div class="card">
-                    <h3>Bioactive & Therapeutic Materials</h3>
-                    <p>Electronic patches and implants to actively modulate tissue response.</p>
+                    <h3>Bioactive & Therapeutic Soft Materials</h3>
+                    <p>
+                        Materials that interface with tissues through light, electrical stimulation, and biochemical
+                        cues to support sensing and modulation of biological responses.
+                    </p>
                 </div>
             </div>
         </section>
 
-                <div>
-                    <div class="card">
-                        <h3>Opportunities</h3>
-                        <p class="muted">
-                            We are building a diverse, collaborative team of students and postdocs with interests in:
-                        </p>
-                        <ul class="clean">
-                            <li>Polymer & soft materials</li>
-                            <li>Electrochemistry / bioelectronics</li>
-                            <li>Microfabrication & printing</li>
-                            <li>Modeling & data science</li>
-                        </ul>
-                        <p class="muted" style="margin-top:0.7rem;">
-                            Prospective group members are encouraged to email a CV and short statement of interests.
-                        </p>
-                    </div>
-                </div>
+        <!-- Opportunities -->
+        <section class="section">
+            <div class="card">
+                <h3>Opportunities</h3>
+                <p class="muted">
+                    We are building a diverse, collaborative team with interests in:
+                </p>
+                <ul class="clean">
+                    <li>Polymer & soft materials</li>
+                    <li>Electrochemistry / bioelectronics</li>
+                    <li>Microfabrication & printing</li>
+                    <li>Modeling, simulation & data science</li>
+                </ul>
+                <p class="muted" style="margin-top:0.7rem;">
+                    Prospective group members are encouraged to email a CV and a short statement of research interests.
+                </p>
             </div>
         </section>
 
@@ -355,14 +355,15 @@
                 <h3>Principal Investigator</h3>
                 <p><strong>Dr. Eloise Bihar</strong> <span class="pill">Assistant Professor, MDI</span></p>
                 <p class="muted">
-                    Dr. Bihar’s research focuses on soft bioelectronics, hydrogel-based sensors, organic
-                    electrochemical transistors, and multifunctional cryogels for wound healing and neural
-                    interfaces.
-                </p>
-                <p class="muted">
-                    Before joining UB, she worked on printed electronics and biointerfaces across academia and
-                    industry. She enjoys building interdisciplinary teams and translating materials discoveries
-                    into impactful devices.
+            Eloise Bihar is an assistant professor in the Department of Materials Design and Innovation at the
+            State University of New York at Buffalo. She earned her Ph.D. from École des Mines de Saint-Étienne
+            in France and completed two postdoctoral fellowships – one at King Abdullah University of Science and
+            Technology (KAUST) in Saudi Arabia and another at the University of Colorado-Boulder.
+        </p>
+        <p class="muted">
+            With a background in printed electronics and sensors, her research focuses on developing innovative,
+            low-cost biosensors and biodegradable electronic materials for applications in healthcare,
+            environmental monitoring, and agriculture. Her work advances sustainable materials and smart sensing technologies.
                 </p>
             </div>
 
@@ -383,11 +384,12 @@
                     University at Buffalo
                 </p>
                 <p class="muted">
-                    Email: <em>eloisebiatbuffalo.edu</em><br />
+                    Email: <em>eloisebi(at)buffalo.edu</em><br />
                     Campus: North Campus, Buffalo, NY, USA
                 </p>
                 <p class="muted">
-                    https://scholar.google.com/citations?user=gNHOzE4AAAAJ&hl=fr
+                    Other links: <a href="https://scholar.google.com/citations?user=gNHOzE4AAAAJ" target="_blank" rel="noopener noreferrer">
+                    Google Scholar Profile</a>
                 </p>
             </div>
         </section>
