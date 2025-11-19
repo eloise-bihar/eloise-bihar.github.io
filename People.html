@@ -22,9 +22,7 @@
             --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.10);
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -33,10 +31,7 @@
             color: var(--dark);
         }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+        a { color: inherit; text-decoration: none; }
 
         .nav {
             position: sticky;
@@ -68,10 +63,7 @@
             font-size: 0.95rem;
             color: var(--muted);
         }
-
-        .nav-links a:hover {
-            color: var(--ub-blue);
-        }
+        .nav-links a:hover { color: var(--ub-blue); }
 
         .page {
             max-width: 1100px;
@@ -115,27 +107,12 @@
             color: var(--muted);
         }
 
-        .muted {
-            color: var(--muted);
-            font-size: 0.94rem;
-        }
-
-        .pill {
-            display: inline-flex;
-            padding: 0.2rem 0.6rem;
-            border-radius: 999px;
-            background: rgba(37, 99, 235, 0.08);
-            font-size: 0.78rem;
-            color: #1d4ed8;
-        }
-
         .profile-photo {
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 6px 16px rgba(15,23,42,0.25);
-            margin-bottom: 0.8rem;
         }
 
         .profile-header {
@@ -143,10 +120,6 @@
             flex-wrap: wrap;
             gap: 1.2rem;
             align-items: center;
-        }
-
-        .profile-header-text {
-            min-width: 220px;
         }
 
         @media (max-width: 640px) {
@@ -157,21 +130,23 @@
         }
     </style>
 </head>
+
 <body>
     <header class="nav">
         <div class="nav-inner">
             <div class="nav-title">Bihar Lab @ UB</div>
             <nav class="nav-links">
                 <a href="index.html#research">Research</a>
-                <a href="news.html">News</a>
-                <a href="people.html">People</a>
-                <a href="teaching.html">Teaching</a>
+                <a href="News.html">News</a>
+                <a href="People.html">People</a>
+                <a href="Teaching.html">Teaching</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
         </div>
     </header>
 
     <main class="page">
+
         <section class="section">
             <h2 class="section-title">People</h2>
             <p class="section-subtitle">The Bihar Lab is growing a collaborative, interdisciplinary team.</p>
@@ -180,47 +155,36 @@
             <div class="card">
                 <h3>Principal Investigator</h3>
                 <div class="profile-header">
-                    <img src="eloise.jpg" alt="Photo of Dr. Eloise Bihar" class="profile-photo">
-                    <!-- Replace eloise.jpg with your actual image path or GitHub raw URL -->
+                    <img src="eloise bihar.png" alt="Dr. Eloise Bihar" class="profile-photo">
 
-                    <div class="profile-header-text">
-                        <p>
-                            <strong>Dr. Eloise Bihar</strong>
-                            <span class="pill">Assistant Professor, MDI</span>
+                    <div>
+                        <p><strong>Dr. Eloise Bihar</strong> <span class="pill">Assistant Professor, MDI</span></p>
+                        <p class="muted">
+                            Eloise Bihar is an assistant professor in the Department of Materials Design and Innovation
+                            at the University at Buffalo. She earned her Ph.D. from École des Mines de Saint-Étienne
+                            and completed postdoctoral fellowships at KAUST (Saudi Arabia) and the University of Colorado-Boulder.
                         </p>
                         <p class="muted">
-                            Eloise Bihar is an assistant professor in the Department of Materials Design and Innovation at the
-                            State University of New York at Buffalo. She earned her Ph.D. from École des Mines de Saint-Étienne
-                            in France and completed two postdoctoral fellowships – one at King Abdullah University of Science and
-                            Technology (KAUST) in Saudi Arabia and another at the University of Colorado-Boulder.
-                        </p>
-                        <p class="muted">
-                            With a background in printed electronics and sensors, her research focuses on developing innovative,
-                            low-cost biosensors and biodegradable electronic materials for applications in healthcare,
-                            environmental monitoring, and agriculture. Her work advances sustainable materials and smart sensing
-                            technologies.
+                            Her research focuses on hydrogel-based biosensors, soft bioelectronics, OECTs, and
+                            multifunctional cryogels for wound healing, infection monitoring, and neural interfaces.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Graduate Students -->
+            <!-- Graduate Student -->
             <div class="card">
                 <h3>Graduate Students</h3>
 
                 <div class="profile-header">
-                    <img src="rebekah.jpg" alt="Photo of Rebekah" class="profile-photo">
-                    <!-- Replace rebekah.jpg with your actual image path or GitHub raw URL -->
+                    <img src="Rebekah Finster.jpg" alt="Rebekah Finster" class="profile-photo">
 
-                    <div class="profile-header-text">
-                        <p>
-                            <strong>Rebekah [Last Name]</strong>
-                            <span class="pill">Ph.D. Student</span>
-                        </p>
+                    <div>
+                        <p><strong>Rebekah Finster</strong> <span class="pill">Ph.D. Student</span></p>
                         <p class="muted">
-                            Rebekah works on hydrogel engineering, OECT-based biosensing, and soft bioelectronic platforms.
-                            Her research explores ion transport in cryogels and the design of hydrogel-integrated electronic
-                            devices for sensing and therapeutic applications.
+                            Rebekah works on hydrogel engineering, OECT-based biosensing, and soft bioelectronics.
+                            Her research explores ion transport in cryogels and the design of hydrogel-integrated
+                            therapeutic sensing platforms.
                         </p>
                     </div>
                 </div>
@@ -231,29 +195,20 @@
                 <h3>Alumni</h3>
 
                 <p><strong>Khrystyna Adam</strong> <span class="pill">M.S. 2024</span></p>
-                <p class="muted" style="margin-top:-0.4rem;">Master’s thesis researcher in soft materials and sensing.</p>
+                <p class="muted" style="margin-top:-0.4rem;">Master’s thesis researcher in soft materials.</p>
 
                 <hr style="border: none; border-top: 1px solid rgba(148,163,184,0.3); margin: 0.8rem 0;">
 
                 <p><strong>Amie Sallah</strong> <span class="pill">Undergraduate Research Assistant</span></p>
-                <p class="muted" style="margin-top:-0.4rem;">
-                    10/2024 – 05/2025 · Advisor: Dr. Bihar
-                </p>
+                <p class="muted" style="margin-top:-0.4rem;">10/2024 – 05/2025 · </p>
 
                 <p><strong>Oreomo Sosanya</strong> <span class="pill">Undergraduate Research Assistant</span></p>
-                <p class="muted" style="margin-top:-0.4rem;">
-                    10/2024 – 05/2025 · Advisor: Dr. Bihar
-                </p>
+                <p class="muted" style="margin-top:-0.4rem;">10/2024 – 05/2025 · </p>
 
                 <p><strong>Moumiza Hasan</strong> <span class="pill">Undergraduate Research Assistant</span></p>
-                <p class="muted" style="margin-top:-0.4rem;">
-                    10/2024 – 05/2025 · Advisor: Dr. Bihar
-                </p>
+                <p class="muted" style="margin-top:-0.4rem;">10/2024 – 05/2025 · </p>
             </div>
 
-            <p class="muted" style="margin-top:0.9rem;">
-                Graduate and undergraduate positions will be posted here as the lab grows.
-            </p>
         </section>
     </main>
 </body>
