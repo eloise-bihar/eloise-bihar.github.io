@@ -1,1 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Bihar Lab | People</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --ub-blue: #005bbb;
+            --dark: #111827;
+            --muted: #6b7280;
+            --card-bg: #ffffff;
+            --page-bg: #f3f4f6;
+            --accent: #0ea5e9;
+            --radius-lg: 18px;
+            --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.10);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--page-bg);
+            color: var(--dark);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            background: linear-gradient(to right, rgba(255,255,255,0.92), rgba(243,244,246,0.92));
+            border-bottom: 1px solid rgba(148,163,184,0.25);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.7rem 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--ub-blue);
+            letter-spacing: 0.03em;
+        }
+
+        .nav-links a {
+            margin-left: 1.2rem;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .nav-links a:hover {
+            color: var(--ub-blue);
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 1.4rem 3.5rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 1.4rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 1.3rem 1.4rem 1.4rem;
+            box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(148,163,184,0.4);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 0.35rem;
+            font-size: 1.02rem;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.92rem;
+            color: var(--muted);
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .pill {
+            display: inline-flex;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            background: rgba(37, 99, 235, 0.08);
+            font-size: 0.78rem;
+            color: #1d4ed8;
+        }
+
+        .profile-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 6px 16px rgba(15,23,42,0.25);
+            margin-bottom: 0.8rem;
+        }
+
+        .profile-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        .profile-header-text {
+            min-width: 220px;
+        }
+
+        @media (max-width: 640px) {
+            .profile-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <div class="nav-inner">
+            <div class="nav-title">Bihar Lab @ UB</div>
+            <nav class="nav-links">
+                <a href="index.html#research">Research</a>
+                <a href="news.html">News</a>
+                <a href="people.html">People</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="section">
+            <h2 class="section-title">People</h2>
+            <p class="section-subtitle">The Bihar Lab is growing a collaborative, interdisciplinary team.</p>
+
+            <!-- PI -->
+            <div class="card">
+                <h3>Principal Investigator</h3>
+                <div class="profile-header">
+                    <img src="eloise.jpg" alt="Photo of Dr. Eloise Bihar" class="profile-photo">
+                    <!-- Replace eloise.jpg with your actual image path or GitHub raw URL -->
+
+                    <div class="profile-header-text">
+                        <p>
+                            <strong>Dr. Eloise Bihar</strong>
+                            <span class="pill">Assistant Professor, MDI</span>
+                        </p>
+                        <p class="muted">
+                            Eloise Bihar is an assistant professor in the Department of Materials Design and Innovation at the
+                            State University of New York at Buffalo. She earned her Ph.D. from École des Mines de Saint-Étienne
+                            in France and completed two postdoctoral fellowships – one at King Abdullah University of Science and
+                            Technology (KAUST) in Saudi Arabia and another at the University of Colorado-Boulder.
+                        </p>
+                        <p class="muted">
+                            With a background in printed electronics and sensors, her research focuses on developing innovative,
+                            low-cost biosensors and biodegradable electronic materials for applications in healthcare,
+                            environmental monitoring, and agriculture. Her work advances sustainable materials and smart sensing
+                            technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graduate Students -->
+            <div class="card">
+                <h3>Graduate Students</h3>
+
+                <div class="profile-header">
+                    <img src="rebekah.jpg" alt="Photo of Rebekah" class="profile-photo">
+                    <!-- Replace rebekah.jpg with your actual image path or GitHub raw URL -->
+
+                    <div class="profile-header-text">
+                        <p>
+                            <strong>Rebekah [Last Name]</strong>
+                            <span class="pill">Ph.D. Student</span>
+                        </p>
+                        <p class="muted">
+                            Rebekah works on hydrogel engineering, OECT-based biosensing, and soft bioelectronic platforms.
+                            Her research explores ion transport in cryogels and the design of hydrogel-integrated electronic
+                            devices for sensing and therapeutic applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni -->
+            <div class="card">
+                <h3>Alumni</h3>
+
+                <p><strong>Khrystyna Adam</strong> <span class="pill">M.S. 2024</span></p>
+                <p class="muted" style="margin-top:-0.4rem;">Master’s thesis researcher in soft materials and sensing.</p>
+
+                <hr style="border: none; border-top: 1px solid rgba(148,163,184,0.3); margin: 0.8rem 0;">
+
+                <p><strong>Amie Sallah</strong> <span class="pill">Undergraduate Research Assistant</span></p>
+                <p class="muted" style="margin-top:-0.4rem;">
+                    10/2024 – 05/2025 · Advisor: Dr. Bihar
+                </p>
+
+                <p><strong>Oreomo Sosanya</strong> <span class="pill">Undergraduate Research Assistant</span></p>
+                <p class="muted" style="margin-top:-0.4rem;">
+                    10/2024 – 05/2025 · Advisor: Dr. Bihar
+                </p>
+
+                <p><strong>Moumiza Hasan</strong> <span class="pill">Undergraduate Research Assistant</span></p>
+                <p class="muted" style="margin-top:-0.4rem;">
+                    10/2024 – 05/2025 · Advisor: Dr. Bihar
+                </p>
+            </div>
+
+            <p class="muted" style="margin-top:0.9rem;">
+                Graduate and undergraduate positions will be posted here as the lab grows.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
 
