@@ -97,12 +97,34 @@
 
         .hero-title { font-size: 2.4rem; margin: 0 0 0.4rem; color: var(--ub-blue); }
         .hero-subtitle { font-size: 1.05rem; font-weight: 500; margin: 0 0 0.8rem; }
-        .hero-text { max-width: 650px; font-size: 0.98rem; color: var(--muted); margin-bottom: 1.5rem; }
+
+        /* less compact hero text */
+        .hero-text {
+            max-width: 650px;
+            font-size: 0.98rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
 
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 0.8rem;
+        }
+
+        /* hero image block */
+        .hero-figure {
+            margin-top: 1.7rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-figure img {
+            max-width: 420px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.4);
         }
 
         .btn {
@@ -134,7 +156,12 @@
 
         .section { margin-bottom: 2.5rem; }
         .section-title { font-size: 1.3rem; margin-bottom: 0.4rem; }
-        .section-subtitle { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.4rem; }
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 1.4rem;
+            line-height: 1.6;   /* also a bit less compact here */
+        }
 
         .grid {
             display: grid;
@@ -146,6 +173,7 @@
             .grid { grid-template-columns: 1fr; }
             .hero { padding: 1.8rem 1.4rem 1.9rem; }
             .hero-title { font-size: 2rem; }
+            .hero-figure img { max-width: 100%; }
         }
 
         .card {
@@ -178,14 +206,11 @@
         <div class="nav-inner">
             <div class="nav-title">Bihar Lab @ UB</div>
             <nav class="nav-links">
-
-                <!-- ✅ FIXED LINKS TO MATCH YOUR FILE NAMES -->
                 <a href="index.html#research">Research</a>
                 <a href="News.html">News</a>
                 <a href="People.html">People</a>
                 <a href="Teaching.html">Teaching</a>
                 <a href="index.html#contact">Contact</a>
-
             </nav>
         </div>
     </header>
@@ -197,16 +222,22 @@
             <div class="hero-kicker">Materials · Bioelectronics · Hydrogels</div>
             <h1 class="hero-title">Bihar Lab</h1>
             <p class="hero-subtitle">Soft Bioelectronics & Hydrogel-Based Sensors</p>
+
+            <!-- shorter, less dense text -->
             <p class="hero-text">
                 We are an interdisciplinary research group in the Department of Materials Design and Innovation
-                at the University at Buffalo. Our work bridges materials science, electrochemistry, and
-                bioengineering to create soft electronic systems using printed and adaptive hydrogels.
+                at the University at Buffalo. We design soft hydrogel-based bioelectronic devices for sensing,
+                stimulation, and communication with living systems.
             </p>
+
             <div class="hero-actions">
                 <a class="btn btn-primary" href="#research">Explore the research</a>
-
-                <!-- ❗ FIX: this must match People.html -->
                 <a class="btn btn-ghost" href="People.html">Meet the group</a>
+            </div>
+
+            <!-- NEW: neon brain image just under the buttons -->
+            <div class="hero-figure">
+                <img src="brain_hydrogel_hero.png" alt="Hydrogels, electronics, AI, and biological applications illustration" />
             </div>
         </section>
 
@@ -215,7 +246,7 @@
             <h2 class="section-title">Research Areas & Directions</h2>
             <p class="section-subtitle">
                 We study soft materials, hydrogel electronics, and biointerfaces that communicate with biology using ions,
-                electrons, and light. 
+                electrons, and light.
             </p>
 
             <div class="grid">
