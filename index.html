@@ -14,8 +14,8 @@
         :root {
             --ub-blue: #38bdf8;         /* neon-ish UB blue */
             --text-light: #ffffff;      /* pure white text */
-            --text-muted: #c7c7c7;      /* soft neutral gray */
-            --card-bg: #0b1221;         /* card background */
+            --text-muted: #e5e5e5;      /* very light grey, same as other pages */
+            --card-bg: #0b1221;         /* card background (harmonized) */
             --page-bg: #020617;         /* main dark background */
             --accent: #0ea5e9;
             --radius-lg: 18px;
@@ -50,10 +50,10 @@
         .nav {
             position: sticky;
             top: 0;
-            z-index: 10;
+            z-index: 20;
             backdrop-filter: blur(16px);
-            background: rgba(2, 6, 23, 0.92);
-            border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+            background: rgba(2, 6, 23, 0.9);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
         }
 
         .nav-inner {
@@ -90,7 +90,7 @@
             padding: 2.5rem 1.4rem 3.5rem;
         }
 
-        /* Hero – now dark with glow */
+        /* Hero – dark with glow */
         .hero {
             background: radial-gradient(circle at top left, #111827, #020617 60%);
             border-radius: 26px;
@@ -226,7 +226,7 @@
             border-radius: var(--radius-lg);
             padding: 1rem 1.1rem;
             box-shadow: 0 10px 26px rgba(0, 0, 0, 0.7);
-            border: 1px solid rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .card h3 {
@@ -374,8 +374,6 @@
                     Dr. Eloise Bihar<br/>
                     Department of Materials Design and Innovation (MDI)<br/>
                     University at Buffalo
-                </p>
-                <p class="muted">
                     Email: <em>eloisebi(at)buffalo.edu</em><br/>
                     Campus: Bell Hall, North Campus, Buffalo, NY, USA
                 </p>
