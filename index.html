@@ -13,16 +13,19 @@
     <style>
         :root {
             --ub-blue: #005bbb;
-            --dark: #111827;
-            --muted: #6b7280;
-            --card-bg: #ffffff;
-            --page-bg: #f3f4f6;
+            --dark: #000000;      /* main text color */
+            --muted: #444444;     /* secondary text */
+            --card-bg: #ffffff;   /* white cards */
+            --page-bg: #ffffff;   /* white page */
             --accent: #0ea5e9;
             --radius-lg: 18px;
-            --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.10);
+            --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.08);
         }
 
-        * { box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -30,7 +33,16 @@
             color: var(--dark);
         }
 
-        a { color: inherit; text-decoration: none; }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Force text to black by default */
+        h1, h2, h3, h4, h5, h6,
+        p, span, li, a {
+            color: var(--dark);
+        }
 
         /* Top navigation */
         .nav {
@@ -38,8 +50,8 @@
             top: 0;
             z-index: 10;
             backdrop-filter: blur(10px);
-            background: linear-gradient(to right, rgba(255,255,255,0.92), rgba(243,244,246,0.92));
-            border-bottom: 1px solid rgba(148,163,184,0.25);
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         }
 
         .nav-inner {
@@ -64,7 +76,9 @@
             color: var(--muted);
         }
 
-        .nav-links a:hover { color: var(--ub-blue); }
+        .nav-links a:hover {
+            color: var(--ub-blue);
+        }
 
         /* Layout */
         .page {
@@ -75,11 +89,12 @@
 
         /* Hero */
         .hero {
-            background: radial-gradient(circle at top left, #e0f2fe, #eff6ff 40%, #f3f4f6 100%);
+            background: #ffffff; /* plain white */
             border-radius: 26px;
             padding: 2.4rem 2.1rem 2.3rem;
             box-shadow: var(--shadow-soft);
             margin-bottom: 2.5rem;
+            border: 1px solid rgba(0, 0, 0, 0.04);
         }
 
         .hero-kicker {
@@ -90,15 +105,23 @@
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.12em;
-            background: rgba(37, 99, 235, 0.06);
-            color: #1d4ed8;
+            background: #f3f4f6;
+            color: #000000;
             margin-bottom: 0.9rem;
         }
 
-        .hero-title { font-size: 2.4rem; margin: 0 0 0.4rem; color: var(--ub-blue); }
-        .hero-subtitle { font-size: 1.05rem; font-weight: 500; margin: 0 0 0.8rem; }
+        .hero-title {
+            font-size: 2.4rem;
+            margin: 0 0 0.4rem;
+            color: #000000;
+        }
 
-        /* less compact hero text */
+        .hero-subtitle {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin: 0 0 0.8rem;
+        }
+
         .hero-text {
             max-width: 650px;
             font-size: 0.98rem;
@@ -113,7 +136,6 @@
             gap: 0.8rem;
         }
 
-        /* hero image block */
         .hero-figure {
             margin-top: 1.7rem;
             display: flex;
@@ -124,7 +146,7 @@
             max-width: 420px;
             width: 100%;
             border-radius: 20px;
-            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.4);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
         }
 
         .btn {
@@ -137,25 +159,39 @@
             font-weight: 500;
             border: none;
             cursor: pointer;
-            transition: transform 0.1s ease, box-shadow 0.1s ease;
+            transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--ub-blue), var(--accent));
-            color: white;
+            color: #ffffff;
             box-shadow: 0 14px 30px rgba(37, 99, 235, 0.35);
         }
-        .btn-primary:hover { transform: translateY(-1px); }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+        }
 
         .btn-ghost {
-            background: rgba(255,255,255,0.8);
-            border: 1px solid rgba(148,163,184,0.6);
-            color: var(--dark);
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            color: #000000;
         }
-        .btn-ghost:hover { background: white; transform: translateY(-1px); }
 
-        .section { margin-bottom: 2.5rem; }
-        .section-title { font-size: 1.3rem; margin-bottom: 0.4rem; }
+        .btn-ghost:hover {
+            background: #f9fafb;
+            transform: translateY(-1px);
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
+        }
+
         .section-subtitle {
             font-size: 0.9rem;
             color: var(--muted);
@@ -170,18 +206,26 @@
         }
 
         @media (max-width: 720px) {
-            .grid { grid-template-columns: 1fr; }
-            .hero { padding: 1.8rem 1.4rem 1.9rem; }
-            .hero-title { font-size: 2rem; }
-            .hero-figure img { max-width: 100%; }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                padding: 1.8rem 1.4rem 1.9rem;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-figure img {
+                max-width: 100%;
+            }
         }
 
         .card {
             background: var(--card-bg);
             border-radius: var(--radius-lg);
             padding: 1rem 1.1rem;
-            box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
-            border: 1px solid rgba(148,163,184,0.4);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .card h3 {
@@ -190,15 +234,37 @@
             font-size: 1.02rem;
         }
 
-        .card p { margin: 0; font-size: 0.92rem; color: var(--muted); }
+        .card p {
+            margin: 0;
+            font-size: 0.92rem;
+            color: var(--muted);
+        }
 
-        ul.clean { list-style: none; padding-left: 1.1rem; margin: 0.2rem 0 0; }
-        ul.clean li { font-size: 0.94rem; margin-bottom: 0.15rem; position: relative; }
-        ul.clean li::before { content: "•"; position: absolute; left: -0.9rem; color: var(--accent); }
+        ul.clean {
+            list-style: none;
+            padding-left: 1.1rem;
+            margin: 0.2rem 0 0;
+        }
 
-        .muted { color: var(--muted); font-size: 0.94rem; }
+        ul.clean li {
+            font-size: 0.94rem;
+            margin-bottom: 0.15rem;
+            position: relative;
+        }
 
-        /* Fix compact Contact section spacing */
+        ul.clean li::before {
+            content: "•";
+            position: absolute;
+            left: -0.9rem;
+            color: var(--accent);
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        /* Contact section spacing */
         #contact .card p {
             margin: 0.6rem 0;
             line-height: 1.7;
@@ -233,7 +299,6 @@
             <h1 class="hero-title">Bihar Lab</h1>
             <p class="hero-subtitle">Soft Bioelectronics & Hydrogel-Based Sensors</p>
 
-            <!-- shorter, less dense text -->
             <p class="hero-text">
                 We are an interdisciplinary research group in the Department of Materials Design and Innovation
                 at the University at Buffalo. We design soft hydrogel-based bioelectronic devices for sensing,
@@ -245,7 +310,6 @@
                 <a class="btn btn-ghost" href="People.html">Meet the group</a>
             </div>
 
-            <!-- NEW: neon brain image just under the buttons -->
             <div class="hero-figure">
                 <img src="brain_hydrogel_hero.png" alt="Hydrogels, electronics, AI, and biological applications illustration" />
             </div>
