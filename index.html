@@ -12,19 +12,17 @@
 
     <style>
         :root {
-            --ub-blue: #005bbb;
-            --dark: #000000;      /* main text color */
-            --muted: #444444;     /* secondary text */
-            --card-bg: #ffffff;   /* white cards */
-            --page-bg: #ffffff;   /* white page */
+            --ub-blue: #38bdf8;         /* bright UB-ish blue for dark mode */
+            --dark: #e5e7eb;           /* main text (light gray / almost white) */
+            --muted: #9ca3af;          /* secondary text */
+            --card-bg: #020617;        /* panels / cards */
+            --page-bg: #020617;        /* page background */
             --accent: #0ea5e9;
             --radius-lg: 18px;
-            --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.08);
+            --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.55);
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -33,25 +31,22 @@
             color: var(--dark);
         }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+        a { color: inherit; text-decoration: none; }
 
-        /* Force text to black by default */
+        /* Global text colors */
         h1, h2, h3, h4, h5, h6,
         p, span, li, a {
             color: var(--dark);
         }
 
-        /* Top navigation */
+        /* Top navigation (dark) */
         .nav {
             position: sticky;
             top: 0;
             z-index: 10;
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(16px);
+            background: linear-gradient(to right, #020617, #020617);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.9);
         }
 
         .nav-inner {
@@ -76,9 +71,7 @@
             color: var(--muted);
         }
 
-        .nav-links a:hover {
-            color: var(--ub-blue);
-        }
+        .nav-links a:hover { color: var(--dark); }
 
         /* Layout */
         .page {
@@ -87,14 +80,14 @@
             padding: 2.5rem 1.4rem 3.5rem;
         }
 
-        /* Hero */
+        /* Hero – dark panel with glow on title */
         .hero {
-            background: #ffffff; /* plain white */
+            background: radial-gradient(circle at top left, #111827, #020617 60%);
             border-radius: 26px;
             padding: 2.4rem 2.1rem 2.3rem;
             box-shadow: var(--shadow-soft);
             margin-bottom: 2.5rem;
-            border: 1px solid rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(15, 23, 42, 0.9);
         }
 
         .hero-kicker {
@@ -105,15 +98,18 @@
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.12em;
-            background: #f3f4f6;
-            color: #000000;
+            background: rgba(15, 23, 42, 0.8);
+            color: var(--muted);
             margin-bottom: 0.9rem;
         }
 
         .hero-title {
             font-size: 2.4rem;
             margin: 0 0 0.4rem;
-            color: #000000;
+            color: #f9fafb;
+            text-shadow:
+                0 0 18px rgba(56, 189, 248, 0.5),
+                0 0 38px rgba(37, 99, 235, 0.4);
         }
 
         .hero-subtitle {
@@ -146,9 +142,10 @@
             max-width: 420px;
             width: 100%;
             border-radius: 20px;
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
         }
 
+        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -163,9 +160,9 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--ub-blue), var(--accent));
-            color: #ffffff;
-            box-shadow: 0 14px 30px rgba(37, 99, 235, 0.35);
+            background: radial-gradient(circle at top left, #38bdf8, #0ea5e9);
+            color: #f9fafb;
+            box-shadow: 0 18px 40px rgba(8, 47, 73, 0.85);
         }
 
         .btn-primary:hover {
@@ -173,13 +170,13 @@
         }
 
         .btn-ghost {
-            background: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            color: #000000;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(55, 65, 81, 0.9);
+            color: #e5e7eb;
         }
 
         .btn-ghost:hover {
-            background: #f9fafb;
+            background: rgba(15, 23, 42, 1);
             transform: translateY(-1px);
         }
 
@@ -190,6 +187,10 @@
         .section-title {
             font-size: 1.3rem;
             margin-bottom: 0.4rem;
+            color: #f9fafb;
+            text-shadow:
+                0 0 10px rgba(15, 23, 42, 0.8),
+                0 0 24px rgba(56, 189, 248, 0.4);
         }
 
         .section-subtitle {
@@ -206,32 +207,25 @@
         }
 
         @media (max-width: 720px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-            .hero {
-                padding: 1.8rem 1.4rem 1.9rem;
-            }
-            .hero-title {
-                font-size: 2rem;
-            }
-            .hero-figure img {
-                max-width: 100%;
-            }
+            .grid { grid-template-columns: 1fr; }
+            .hero { padding: 1.8rem 1.4rem 1.9rem; }
+            .hero-title { font-size: 2rem; }
+            .hero-figure img { max-width: 100%; }
         }
 
         .card {
-            background: var(--card-bg);
+            background: #020617;
             border-radius: var(--radius-lg);
             padding: 1rem 1.1rem;
-            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(31, 41, 55, 0.9);
         }
 
         .card h3 {
             margin-top: 0;
             margin-bottom: 0.35rem;
             font-size: 1.02rem;
+            color: #f9fafb;
         }
 
         .card p {
@@ -250,6 +244,7 @@
             font-size: 0.94rem;
             margin-bottom: 0.15rem;
             position: relative;
+            color: var(--dark);
         }
 
         ul.clean li::before {
