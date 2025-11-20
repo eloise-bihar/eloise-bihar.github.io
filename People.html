@@ -13,11 +13,10 @@
     <style>
         :root {
             --ub-blue: #38bdf8;         
-            --dark: #e5e7eb;            
-            --muted: #9ca3af;           
-            --card-bg: #020617;         
+            --text-light: #ffffff;      
+            --text-muted: #e5e5e5;      
+            --card-bg: #0b1221;         
             --page-bg: #020617;         
-            --accent: #0ea5e9;
             --radius-lg: 18px;
             --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.55);
         }
@@ -27,7 +26,7 @@
         body {
             margin: 0;
             background: var(--page-bg);
-            color: var(--dark);
+            color: var(--text-light);
             font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         }
 
@@ -37,10 +36,10 @@
         .nav {
             position: sticky;
             top: 0;
-            z-index: 10;
+            z-index: 20;
             backdrop-filter: blur(16px);
-            background: rgba(2, 6, 23, 0.95);
-            border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+            background: rgba(2, 6, 23, 0.9);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
         }
 
         .nav-inner {
@@ -60,11 +59,13 @@
 
         .nav-links a {
             margin-left: 1.2rem;
-            font-size: 0.95rem;
-            color: var(--muted);
+            color: var(--text-muted);
+            transition: 0.2s;
         }
 
-        .nav-links a:hover { color: var(--dark); }
+        .nav-links a:hover {
+            color: var(--text-light);
+        }
 
         /* PAGE LAYOUT */
         .page {
@@ -74,17 +75,17 @@
         }
 
         .section-title {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 0.4rem;
-            color: #f9fafb;
+            color: var(--text-light);
             text-shadow:
-                0 0 14px rgba(56, 189, 248, 0.4),
-                0 0 28px rgba(2, 132, 199, 0.3);
+                0 0 14px rgba(56, 189, 248, 0.5),
+                0 0 28px rgba(2, 132, 199, 0.35);
         }
 
         .section-subtitle {
             font-size: 0.95rem;
-            color: var(--muted);
+            color: var(--text-muted);
             margin-bottom: 1.6rem;
         }
 
@@ -94,28 +95,26 @@
             border-radius: var(--radius-lg);
             padding: 1.6rem 1.6rem;
             margin-bottom: 2rem;
-            border: 1px solid rgba(31, 41, 55, 0.9);
+            border: 1px solid rgba(255,255,255,0.1);
             box-shadow: var(--shadow-soft);
         }
 
         .card h3 {
             margin-top: 0;
             margin-bottom: 1rem;
-            font-size: 1.15rem;
-            color: #f9fafb;
+            font-size: 1.2rem;
+            color: var(--text-light);
             text-shadow:
-                0 0 10px rgba(15, 23, 42, 0.8),
-                0 0 24px rgba(56, 189, 248, 0.4);
+                0 0 10px rgba(56, 189, 248, 0.35),
+                0 0 22px rgba(8, 47, 73, 0.85);
         }
 
         .card p {
             margin: 0 0 0.45rem 0;
             font-size: 0.95rem;
-            color: var(--muted);
+            color: var(--text-muted);
             line-height: 1.55;
         }
-
-        .muted { color: var(--muted); }
 
         /* PROFILE */
         .profile-header {
@@ -146,7 +145,7 @@
             border-radius: 999px;
             font-size: 0.75rem;
             font-weight: 600;
-            background: rgba(56, 189, 248, 0.15);
+            background: rgba(56, 189, 248, 0.18);
             color: #38bdf8;
         }
 
@@ -155,7 +154,7 @@
 
         .alumni-divider {
             border: none;
-            border-top: 1px solid rgba(148, 163, 184, 0.12);
+            border-top: 1px solid rgba(255,255,255,0.1);
             margin: 1rem 0;
         }
 
@@ -204,8 +203,9 @@
                     </p>
 
                     <p class="muted">
-                        Her research focuses on hydrogel-based biosensors, soft bioelectronics, OECTs,
-                        and multifunctional cryogels for wound healing, infection monitoring, and neural interfaces.
+                        Her research focuses on hydrogel-based biosensors, OECTs,
+                        soft bioelectronics, and multifunctional cryogels for wound healing,
+                        infection monitoring, and neural interfaces.
                     </p>
                 </div>
             </div>
@@ -223,9 +223,26 @@
 
                     <p class="muted">
                         Rebekah works on hydrogel engineering, OECT biosensing, and soft bioelectronics.
-                        Her work explores ion transport in cryogels and the design of hydrogel-integrated sensing and therapeutic platforms.
+                        Her research explores ion transport in cryogels and hydrogel-integrated sensing and therapeutic platforms.
                     </p>
                 </div>
+            </div>
+        </div>
+
+        <!-- Undergraduate Students -->
+        <div class="card">
+            <h3>Undergraduate Students</h3>
+
+            <div class="alumni-entry">
+                <p><strong>Brian Doty</strong> <span class="pill">Undergraduate Research Assistant</span></p>
+                <p class="muted">2025 – Present</p>
+            </div>
+
+            <hr class="alumni-divider">
+
+            <div class="alumni-entry">
+                <p><strong>Aurelia Bartlett</strong> <span class="pill">Undergraduate Research Assistant</span></p>
+                <p class="muted">2025 – Present</p>
             </div>
         </div>
 
