@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Bihar Lab | Publications</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --ub-blue: #38bdf8;
+            --text-light: #ffffff;      /* pure white */
+            --text-muted: #c7c7c7;      /* soft neutral grey */
+            --page-bg: #020617;
+            --card-bg: #0b1221;
+            --radius-lg: 18px;
+            --shadow-soft: 0 18px 40px rgba(0,0,0,0.55);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: var(--page-bg);
+            color: var(--text-light);
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        /* NAVIGATION – keep the dark band */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            backdrop-filter: blur(16px);
+            background: rgba(2, 6, 23, 0.9);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.7rem 1.4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-title {
+            color: var(--ub-blue);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .nav-links a {
+            margin-left: 1.2rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-light);
+        }
+
+        /* MAIN PAGE */
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 1.4rem 3.5rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 0.4rem;
+            color: var(--text-light);
+            text-shadow:
+                0 0 14px rgba(56,189,248,0.55),
+                0 0 32px rgba(56,189,248,0.35);
+        }
+
+        .section-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.4rem;
+        }
+
+        /* CARDS */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 1.4rem 1.6rem;
+            margin-bottom: 1.8rem;
+            border: 1px solid rgba(255,255,255,0.12);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 0.7rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-light);
+            text-shadow:
+                0 0 10px rgba(56,189,248,0.35),
+                0 0 28px rgba(8,47,73,0.8);
+        }
+
+        /* LISTS */
+        ul.pub-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        ul.pub-list li {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--text-light);
+        }
+
+        .pub-title {
+            font-weight: 600;
+        }
+
+        .pub-authors {
+            color: var(--text-muted);
+        }
+
+        .pub-journal {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-title">Bihar Lab @ UB</a>
+
+        <nav class="nav-links">
+            <a href="index.html#research">Research</a>
+            <a href="News.html">News</a>
+            <a href="People.html">People</a>
+            <a href="Teaching.html">Teaching</a>
+            <a href="Publications.html">Publications</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="page">
+    <section class="section">
+        <h2 class="section-title">Recent Publications</h2>
+        <p class="section-subtitle">Selected recent work from the Bihar Lab and collaborators.</p>
+
+        <!-- 2025 -->
+        <div class="card">
+            <h3>2025</h3>
+            <ul class="pub-list">
+                <li>
+                    <div class="pub-title">
+                        Monitoring burn-induced electrical signals in tomato plants using adhesive printed gel electrodes
+                    </div>
+                    <div class="pub-authors">
+                        C. A. Crichton, T. Sharpe, E. Bihar, G. Whiting
+                    </div>
+                    <div class="pub-journal">
+                        Organic and Hybrid Sensors and Bioelectronics XVIII, Proc. SPIE 13590, 20–24 (2025)
+                    </div>
+                </li>
+
+                <li>
+                    <div class="pub-title">
+                        Two-Electrode Screen-Printed pH Sensors for Monitoring Soil and Other Growing Media
+                    </div>
+                    <div class="pub-authors">
+                        C. A. Crichton, L. Lahann, J. P. C. Barba, T. Yuan, E. J. Strand, N. Bruno, P. J. Goodrich,
+                        C. L. Baumbauer, M. Atreya, E. Bihar, W. L. Silver, K. Pister, A. C. Arias, G. L. Whiting
+                    </div>
+                    <div class="pub-journal">
+                        IEEE Sensors Journal (2025)
+                    </div>
+                </li>
+
+                <li>
+                    <div class="pub-title">
+                        Ultrathin Screen-printed Plant Wearable Capacitive Sensors for Environmental Monitoring
+                    </div>
+                    <div class="pub-authors">
+                        E. J. Strand, A. Gopalakrishnan, C. A. Crichton, M. J. Palizzi, O. Lee, T. Borsa,
+                        E. Bihar, P. Goodrich, A. C. Arias, S. Shaheen, R. R. McLeod, G. L. Whiting
+                    </div>
+                    <div class="pub-journal">
+                        Advanced Sensor Research (2025)
+                    </div>
+                </li>
+
+                <li>
+                    <div class="pub-title">
+                        Computational and AI-Driven Design of Hydrogels for Bioelectronic Applications
+                    </div>
+                    <div class="pub-authors">
+                        R. Finster*, P. Sankaran, E. Bihar#
+                    </div>
+                    <div class="pub-journal">
+                        Advanced Electronic Materials, 2400763 (2025)
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 2023 -->
+        <div class="card">
+            <h3>2023</h3>
+            <ul class="pub-list">
+                <li>
+                    <div class="pub-title">
+                        Self-healable stretchable printed electronic cryogels for in-vivo plant monitoring
+                    </div>
+                    <div class="pub-authors">
+                        E. Bihar, E. J. Strand, C. A. Crichton, M. N. Renny, I. Bonter, T. Tran, M. Atreya,
+                        A. Gestos, J. Haseloff, R. R. McLeod, G. L. Whiting*
+                    </div>
+                    <div class="pub-journal">
+                        NPJ Flexible Electronics 7 (1), 48 (2023)
+                    </div>
+                </li>
+
+                <li>
+                    <div class="pub-title">
+                        Multimodal Operation of Printed Electrochemical Transistors for Sensing in Controlled Environment Agriculture
+                    </div>
+                    <div class="pub-authors">
+                        E. J. Strand, M. J. Palizzi, C. A. Crichton, M. N. Renny, E. Bihar, R. R. McLeod, G. L. Whiting
+                    </div>
+                    <div class="pub-journal">
+                        Sensors and Actuators B: Chemical 387, 133763 (2023)
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 2022 -->
+        <div class="card">
+            <h3>2022</h3>
+            <ul class="pub-list">
+                <li>
+                    <div class="pub-title">
+                        A Transient Printed Soil Decomposition Sensor based on a Biopolymer Composite Conductor
+                    </div>
+                    <div class="pub-authors">
+                        M. Atreya, S. Desousa, J.-B. Kauzya, E. Williams, K. Dikshit, A. Hayes, J. Nielson,
+                        A. Palmgren, S. Liu, S. Khorchidian, A. Gopalakrishnan, E. Bihar, C. J. Bruns,
+                        R. D. Bardgett, J. N. Quinton, J. Davies, J. C. Neff, G. L. Whiting
+                    </div>
+                    <div class="pub-journal">
+                        Advanced Science, 2205785 (2022)
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+</main>
+
+</body>
+</html>
