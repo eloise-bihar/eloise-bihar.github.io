@@ -12,40 +12,34 @@
 
     <style>
         :root {
-            --ub-blue: #005bbb;
-            --dark: #111827;
-            --muted: #6b7280;
-            --card-bg: #ffffff;
-            --page-bg: #f3f4f6;
-            --accent: #0ea5e9;
+            --ub-blue: #38bdf8;
+            --text-light: #ffffff;       /* PURE white */
+            --text-muted: #e5e5e5;       /* very light grey */
+            --page-bg: #020617;
+            --card-bg: #0b1221;
             --radius-lg: 18px;
-            --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.10);
+            --shadow-soft: 0 18px 40px rgba(0,0,0,0.55);
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
-            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background: var(--page-bg);
-            color: var(--dark);
+            color: var(--text-light);
+            font-family: "Inter", system-ui, sans-serif;
         }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+        a { color: inherit; text-decoration: none; }
 
+        /* NAVIGATION */
         .nav {
-            position: sticky;header
-            
+            position: sticky;
             top: 0;
-            z-index: 10;
-            backdrop-filter: blur(10px);
-            background: linear-gradient(to right, rgba(255,255,255,0.92), rgba(243,244,246,0.92));
-            border-bottom: 1px solid rgba(148,163,184,0.25);
+            z-index: 20;
+            backdrop-filter: blur(16px);
+            background: rgba(2, 6, 23, 0.9);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.25);
         }
 
         .nav-inner {
@@ -53,92 +47,96 @@
             margin: 0 auto;
             padding: 0.7rem 1.4rem;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
         .nav-title {
+            color: var(--ub-blue);
             font-weight: 700;
             font-size: 1.1rem;
-            color: var(--ub-blue);
-            letter-spacing: 0.03em;
         }
 
         .nav-links a {
             margin-left: 1.2rem;
-            font-size: 0.95rem;
-            color: var(--muted);
+            color: var(--text-muted);
         }
 
         .nav-links a:hover {
-            color: var(--ub-blue);
+            color: var(--text-light);
         }
 
+        /* MAIN PAGE */
         .page {
             max-width: 1100px;
             margin: 0 auto;
             padding: 2.5rem 1.4rem 3.5rem;
         }
 
-        .section {
-            margin-bottom: 2.5rem;
-        }
-
         .section-title {
-            font-size: 1.3rem;
+            font-size: 2rem;
+            color: var(--text-light);
+            text-shadow:
+                0 0 14px rgba(56,189,248,0.55),
+                0 0 32px rgba(56,189,248,0.35);
             margin-bottom: 0.4rem;
         }
 
         .section-subtitle {
-            font-size: 0.9rem;
-            color: var(--muted);
+            font-size: 0.95rem;
+            color: var(--text-muted);
             margin-bottom: 1.4rem;
         }
 
+        /* CARDS */
         .card {
             background: var(--card-bg);
             border-radius: var(--radius-lg);
-            padding: 1.3rem 1.4rem 1.4rem;
-            box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
-            border: 1px solid rgba(148,163,184,0.4);
-            margin-bottom: 1.5rem;
+            padding: 1.4rem 1.6rem;
+            margin-bottom: 1.8rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: var(--shadow-soft);
         }
 
         .card h3 {
             margin-top: 0;
-            margin-bottom: 0.35rem;
-            font-size: 1.02rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-light);
+            text-shadow:
+                0 0 10px rgba(56,189,248,0.35),
+                0 0 28px rgba(8,47,73,0.8);
         }
 
+        /* LISTS */
         ul.clean {
             list-style: none;
-            padding-left: 1.1rem;
-            margin: 0.2rem 0 0;
+            padding-left: 1.2rem;
+            margin-top: 0.2rem;
         }
 
         ul.clean li {
-            font-size: 0.94rem;
-            margin-bottom: 0.25rem;
+            font-size: 0.98rem;
+            margin-bottom: 0.5rem;
             position: relative;
+            color: var(--text-light);
         }
 
         ul.clean li::before {
             content: "•";
             position: absolute;
-            left: -0.9rem;
-            color: var(--accent);
+            left: -1rem;
+            color: var(--ub-blue);
         }
 
-        .muted {
-            color: var(--muted);
-            font-size: 0.94rem;
-        }
+        .muted { color: var(--text-muted); }
     </style>
 </head>
+
 <body>
-  <header class="nav">
+
+<header class="nav">
     <div class="nav-inner">
-        <!-- Make the logo/title clickable and go to the home page -->
         <a href="index.html" class="nav-title">Bihar Lab @ UB</a>
 
         <nav class="nav-links">
@@ -151,36 +149,33 @@
     </div>
 </header>
 
-    <main class="page">
-        <section class="section">
-            <h2 class="section-title">News</h2>
-            <p class="section-subtitle">Updates about the Bihar Lab.</p>
+<main class="page">
+    <section class="section">
+        <h2 class="section-title">News</h2>
+        <p class="section-subtitle">Updates about the Bihar Lab.</p>
 
-            <div class="card">
-                <h3>2025</h3>
-                <ul class="clean">
-                    <li><strong>November 2025</strong> — The Bihar Lab website is officially launched at the University at Buffalo.</li>
-                    <li><strong>Spring 2025</strong> — Dr. Bihar gives an invited talk at MRS Spring 2025 in Seattle </li>
-                    <li><strong>February 2025</strong> — New hydrogel–OECT work begins; undergraduate and graduate recruitment ongoing.</li>
-                    <li><strong>February 2025</strong> — New review in Advanced Electronic Materials!: ''Computational and AI‐driven design of hydrogels for bioelectronic applications''.</li>
-  
-                </ul>
-            </div>
+        <div class="card">
+            <h3>2025</h3>
+            <ul class="clean">
+                <li><strong>November 2025</strong> — The Bihar Lab website is officially launched at UB.</li>
+                <li><strong>Spring 2025</strong> — Dr. Bihar gives an invited talk at MRS Spring 2025 in Seattle.</li>
+                <li><strong>February 2025</strong> — New hydrogel–OECT work begins; recruitment ongoing.</li>
+                <li><strong>February 2025</strong> — New review published in *Advanced Electronic Materials*.</li>
+            </ul>
+        </div>
 
-            <div class="card">
-                <h3>2024</h3>
-                <ul class="clean">
-                    <li><strong>Fall 2024</strong> — First undergraduate researchers join the lab (Amie, Oreomo, Moumiza).</li>
-                    <li><strong>July 2024</strong> — Khrystyna Adam completes her M.S. thesis work. Congrats Krystyna! </li>
-                    <li><strong>January 2024</strong> — Rebekah Finster joins the lab as a Ph.D. student.</li>
-                    <li><strong>Fall 2023</strong> — Dr. Bihar gives an invited talk at MRS Fall 2023 in Boston.</li>
-                    <li><strong>Fall 2023</strong> — Dr. Bihar joins the Department of Materials Design and Innovation at UB.</li>
-                 
-                    
-                </ul>
-            </div>
-        </section>
-    </main>
+        <div class="card">
+            <h3>2024</h3>
+            <ul class="clean">
+                <li><strong>Fall 2024</strong> — First undergraduate researchers join the lab.</li>
+                <li><strong>July 2024</strong> — Khrystyna Adam completes her M.S. thesis.</li>
+                <li><strong>January 2024</strong> — Rebekah Finster joins as first Ph.D. student.</li>
+                <li><strong>Fall 2023</strong> — Invited talk at MRS Fall 2023.</li>
+                <li><strong>Fall 2023</strong> — Dr. Bihar joins MDI at UB.</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
 </body>
 </html>
-
